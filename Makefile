@@ -1,5 +1,5 @@
 CXX=g++
-CFLAGS=-O0 -G
+CPPFLAGS=-O0 -g
 
 test1: test1.o
 	$(CXX) -o test1 test1.o
@@ -11,3 +11,6 @@ test3: test3.o
 	$(CXX) -o test3 test3.o -lpthread
 
 all: test1 test2 test3
+
+clean:
+	-rm *.o test1 test2 test3
